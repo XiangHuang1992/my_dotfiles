@@ -1,0 +1,172 @@
+{
+    "VMs": {
+        "standard_d1": {
+            "Cores": 1,
+            "RAM": 3.5,
+            "Disk": 50,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d2": {
+            "Cores": 2,
+            "RAM": 7,
+            "Disk": 100,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d3": {
+            "Cores": 4,
+            "RAM": 14,
+            "Disk": 200,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d4": {
+            "Cores": 8,
+            "RAM": 28,
+            "Disk": 400,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+		"standard_d11": {
+            "Cores": 2,
+            "RAM": 14,
+            "Disk": 100,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d12": {
+            "Cores": 4,
+            "RAM": 28,
+            "Disk": 200,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d13": {
+            "Cores": 8,
+            "RAM": 56,
+            "Disk": 400,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d14": {
+            "Cores": 16,
+            "RAM": 112,
+            "Disk": 800,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+		"standard_d11_v2": {
+            "Cores": 2,
+            "RAM": 14,
+            "Disk": 100,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d12_v2": {
+            "Cores": 4,
+            "RAM": 28,
+            "Disk": 200,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d13_v2": {
+            "Cores": 8,
+            "RAM": 56,
+            "Disk": 400,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d14_2": {
+            "Cores": 16,
+            "RAM": 112,
+            "Disk": 800,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d1_v2": {
+            "Cores": 1,
+            "RAM": 3.5,
+            "Disk": 50,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d2_v2": {
+            "Cores": 2,
+            "RAM": 7,
+            "Disk": 100,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d3_v2": {
+            "Cores": 4,
+            "RAM": 14,
+            "Disk": 200,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d4_v2": {
+            "Cores": 8,
+            "RAM": 28,
+            "Disk": 400,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_d5_v2": {
+            "Cores": 16,
+            "RAM": 56,
+            "Disk": 800,
+            "GPU": 0,
+            "GPU_Type": "None"
+        },
+        "standard_nc6": {
+            "Cores": 6,
+            "RAM": 56,
+            "Disk": 380,
+            "GPU": 1,
+            "GPU_Type": "K80"
+        },
+        "standard_nc12": {
+            "Cores": 12,
+            "RAM": 112,
+            "Disk": 680,
+            "GPU": 2,
+            "GPU_Type": "K80"
+        },
+        "standard_nc24": {
+            "Cores": 24,
+            "RAM": 224,
+            "Disk": 1440,
+            "GPU": 4,
+            "GPU_Type": "K80"
+        },
+        "standard_nc24r": {
+            "Cores": 24,
+            "RAM": 224,
+            "Disk": 1440,
+            "GPU": 4,
+            "GPU_Type": "K80"
+        },
+        "standard_nv6": {
+            "Cores": 6,
+            "RAM": 56,
+            "Disk": 380,
+            "GPU": 1,
+            "GPU_Type": "M60"
+        },
+        "standard_nv12": {
+            "Cores": 12,
+            "RAM": 112,
+            "Disk": 680,
+            "GPU": 2,
+            "GPU_Type": "M60"
+        },
+        "standard_nv24": {
+            "Cores": 24,
+            "RAM": 224,
+            "Disk": 1440,
+            "GPU": 4,
+            "GPU_Type": "M60"
+        }
+    }
+}

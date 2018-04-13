@@ -1,0 +1,121 @@
+{
+	"name": "vscode-npm",
+	"displayName": "npm",
+	"description": "npm commands for VSCode",
+	"version": "3.3.0",
+	"publisher": "fknop",
+	"icon": "npm_icon.png",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:npm-script.installSavedPackages",
+		"onCommand:npm-script.installPackage",
+		"onCommand:npm-script.installPackageDev",
+		"onCommand:npm-script.runScript",
+		"onCommand:npm-script.runScriptLatest",
+		"onCommand:npm-script.init",
+		"onCommand:npm-script.uninstallPackage",
+		"onCommand:npm-script.uninstallPackageDev",
+		"onCommand:npm-script.publish",
+		"onCommand:npm-script.deprecate",
+		"onCommand:npm-script.raw",
+		"onCommand:npm-script.terminate",
+		"onCommand:npm-script.start",
+		"onCommand:npm-script.test"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "npm-script.start",
+				"title": "npm start",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.test",
+				"title": "npm test",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.terminate",
+				"title": "Terminate running npm script",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.installSavedPackages",
+				"title": "Install saved packages",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.installPackage",
+				"title": "Install and save dependency",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.installPackageDev",
+				"title": "Install and save dev. dependency",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.runScript",
+				"title": "Run  npm script",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.runScriptLatest",
+				"title": "Run last npm script",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.init",
+				"title": "Initialize npm package",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.uninstallPackage",
+				"title": "Uninstall dependency",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.uninstallPackageDev",
+				"title": "Uninstall dev. dependency",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.publish",
+				"title": "Publish package",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.deprecate",
+				"title": "Deprecate package",
+				"category": "npm"
+			},
+			{
+				"command": "npm-script.raw",
+				"title": "Raw npm command",
+				"category": "npm"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	},
+	"dependencies": {
+		"tree-kill": "^1.0.0"
+	},
+	"__metadata": {
+		"id": "6fc9fa34-b8b2-4071-9a0d-3eeb81cd9cfb",
+		"publisherId": "2e612b5a-84d1-41be-a72e-4e557034e003",
+		"publisherDisplayName": "Florian Knop"
+	}
+}

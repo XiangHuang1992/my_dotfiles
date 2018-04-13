@@ -1,0 +1,699 @@
+{
+	"name": "vscode-ai",
+	"displayName": "Visual Studio Code Tools for AI",
+	"description": "",
+	"version": "0.1.7",
+	"publisher": "ms-toolsai",
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"icon": "icons/logo.png",
+	"categories": [
+		"Other"
+	],
+	"repository": {
+		"url": "https://github.com/Microsoft/vscode-tools-for-ai"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-tools-for-ai/issues",
+		"email": "omscs@microsoft.com"
+	},
+	"activationEvents": [
+		"onCommand:vscodeai.editJobProperties",
+		"onCommand:vscodeai.editConfigurations",
+		"onCommand:vscodeai.addConfiguration",
+		"onCommand:vscodeai.removeConfiguration",
+		"onCommand:vscodeai.submitJob",
+		"onCommand:vscodeai.listJobs",
+		"onCommand:vscodeai.showJobDetail",
+		"onCommand:vscodeai.cancelJob",
+		"onCommand:vscodeai.deleteJob",
+		"onCommand:vscodeai.addDebuggerConfiguration",
+		"onCommand:vscodeai.openGallery",
+		"onCommand:vscodeai.local.openTensorBoard",
+		"onCommand:vscodeai.azureml.openTerminal",
+		"onCommand:vscodeai.batchai.editStorageCredentials",
+		"onCommand:vscodeai.azure.login",
+		"onCommand:vscodeai.azure.logout",
+		"onCommand:vscodeai.azure.setSubscription",
+		"onCommand:vscodeai.openStorageExplorer",
+		"onCommand:vscodeai.menu.submitJob",
+		"onView:AIConfigExplorer",
+		"onLanguage:cntk",
+		"onLanguage:python"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "VSCode for AI Configuration",
+			"properties": {
+				"ai.telemetry.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable telemetry for VSCode for AI."
+				},
+				"ai.submission.always-open-jobproperties": {
+					"type": "boolean",
+					"default": false,
+					"description": "Always open job properties while submission."
+				},
+				"ai.azureml.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable Azure ML platform working with AmlWorkbench"
+				},
+				"ai.azureml.exclusive-mode": {
+					"type": "boolean",
+					"default": false,
+					"description": "Only expose Azure ML platform when Azure ML workbench installed. If Azure ML workbench is not installed, this configuration will not take effort"
+				},
+				"ai.azureml.login-timeout": {
+					"type": "number",
+					"default": 300,
+					"description": "Azure Account's login timeout. (in seconds)"
+				},
+				"ai.azureml.workbench-path": {
+					"type": "string",
+					"default": "",
+					"description": "AzureML workbench's installation path"
+				}
+			}
+		},
+		"views": {
+			"explorer": [
+				{
+					"id": "AIConfigExplorer",
+					"name": "AI Explorer"
+				},
+				{
+					"id": "AIStorageExplorer",
+					"name": "AI Storage Explorer",
+					"when": "enableStorageExplorer"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "vscodeai.editJobProperties",
+				"title": "AI: Edit Job Properties"
+			},
+			{
+				"command": "vscodeai.editConfigurations",
+				"title": "AI: Edit Platform Configurations"
+			},
+			{
+				"command": "vscodeai.addConfiguration",
+				"title": "AI: Add Platform Configuration"
+			},
+			{
+				"command": "vscodeai.removeConfiguration",
+				"title": "AI: Remove Platform Configuration"
+			},
+			{
+				"command": "vscodeai.submitJob",
+				"title": "AI: Submit Job"
+			},
+			{
+				"command": "vscodeai.listJobs",
+				"title": "AI: List Jobs"
+			},
+			{
+				"command": "vscodeai.showJobDetail",
+				"title": "AI: Show Job Detail"
+			},
+			{
+				"command": "vscodeai.cancelJob",
+				"title": "AI: Cancel Job"
+			},
+			{
+				"command": "vscodeai.deleteJob",
+				"title": "AI: Delete Job"
+			},
+			{
+				"command": "vscodeai.saveJobLog",
+				"title": "AI: Save Job Log"
+			},
+			{
+				"command": "vscodeai.addDebuggerConfiguration",
+				"title": "AI: Set Local Environment To Launch"
+			},
+			{
+				"command": "vscodeai.openGallery",
+				"title": "AI: Open Azure ML Sample Explorer"
+			},
+			{
+				"command": "vscodeai.createProjectFromGalleryTemplate",
+				"title": "AI: Create Project from Azure ML Sample Template"
+			},
+			{
+				"command": "vscodeai.showGallerySolutionDetail",
+				"title": "Show Gallery Solution Detail"
+			},
+			{
+				"command": "vscodeai.local.openTensorBoard",
+				"title": "AI: Local - Open TensorBoard"
+			},
+			{
+				"command": "vscodeai.azureml.openTerminal",
+				"title": "AI: Azure ML - Open Terminal"
+			},
+			{
+				"command": "vscodeai.azureml.login",
+				"title": "AI: Azure ML - Login"
+			},
+			{
+				"command": "vscodeai.azureml.logout",
+				"title": "AI: Azure ML - Logout"
+			},
+			{
+				"command": "vscodeai.azureml.setSubscription",
+				"title": "AI: Azure ML - Set Subscription"
+			},
+			{
+				"command": "vscodeai.azureml.installWorkbench",
+				"title": "AI: Azure ML - Install Workbench"
+			},
+			{
+				"command": "vscodeai.batchai.login",
+				"title": "AI: Batch AI - Login"
+			},
+			{
+				"command": "vscodeai.batchai.logout",
+				"title": "AI: Batch AI - Logout"
+			},
+			{
+				"command": "vscodeai.batchai.setSubscription",
+				"title": "AI: Batch AI - Set Subscription"
+			},
+			{
+				"command": "vscodeai.batchai.editStorageCredentials",
+				"title": "AI: Batch AI - Edit Storage Credentials"
+			},
+			{
+				"command": "vscodeai.azure.login",
+				"title": "AI: Azure - Login"
+			},
+			{
+				"command": "vscodeai.azure.logout",
+				"title": "AI: Azure - Logout"
+			},
+			{
+				"command": "vscodeai.azure.setSubscription",
+				"title": "AI: Azure - Set Subscription"
+			},
+			{
+				"command": "vscodeai.openStorageExplorer",
+				"title": "AI: Open Storage Explorer"
+			},
+			{
+				"command": "vscodeai.menu.submitJob",
+				"title": "AI: Submit Job"
+			},
+			{
+				"command": "vscodeai.view.common.addConfiguration",
+				"title": "Add Configuration"
+			},
+			{
+				"command": "vscodeai.view.common.editConfiguration",
+				"title": "Edit Configuration"
+			},
+			{
+				"command": "vscodeai.view.common.removeConfiguration",
+				"title": "Remove Configuration"
+			},
+			{
+				"command": "vscodeai.view.common.submitJob",
+				"title": "Submit Job"
+			},
+			{
+				"command": "vscodeai.view.common.listJobs",
+				"title": "List Jobs"
+			},
+			{
+				"command": "vscodeai.view.common.openStorageExplorer",
+				"title": "Open Storage Explorer"
+			},
+			{
+				"command": "vscodeai.view.platform.listJobs",
+				"title": "List Jobs"
+			},
+			{
+				"command": "vscodeai.view.storage.upload",
+				"title": "Upload"
+			},
+			{
+				"command": "vscodeai.view.storage.uploadFolder",
+				"title": "Upload Folder"
+			},
+			{
+				"command": "vscodeai.view.storage.download",
+				"title": "Download"
+			},
+			{
+				"command": "vscodeai.view.storage.mkdir",
+				"title": "New Folder"
+			},
+			{
+				"command": "vscodeai.view.storage.delete",
+				"title": "Delete"
+			},
+			{
+				"command": "vscodeai.view.storage.refresh",
+				"title": "Refresh"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "vscodeai.saveJobLog",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.showJobDetail",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.cancelJob",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.deleteJob",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.createProjectFromGalleryTemplate",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.showGallerySolutionDetail",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.openGallery",
+					"when": "azuremlEnable != 0"
+				},
+				{
+					"command": "vscodeai.azureml.openTerminal",
+					"when": "azuremlEnable != 0"
+				},
+				{
+					"command": "vscodeai.azureml.login",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.azureml.logout",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.azureml.setSubscription",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.azureml.installWorkbench",
+					"when": "azuremlEnable != 0"
+				},
+				{
+					"command": "vscodeai.menu.submitJob",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.common.addConfiguration",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.common.editConfiguration",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.common.removeConfiguration",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.common.submitJob",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.common.listJobs",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.common.openStorageExplorer",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.platform.listJobs",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.batchai.login",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.batchai.logout",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.batchai.setSubscription",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.storage.upload",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.storage.download",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.storage.mkdir",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.storage.refresh",
+					"when": "false"
+				},
+				{
+					"command": "vscodeai.view.storage.delete",
+					"when": "false"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "vscodeai.menu.submitJob",
+					"when": "resourceLangId == cntk"
+				},
+				{
+					"command": "vscodeai.menu.submitJob",
+					"when": "resourceLangId == python"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "vscodeai.menu.submitJob",
+					"when": "resourceLangId == cntk"
+				},
+				{
+					"command": "vscodeai.menu.submitJob",
+					"when": "resourceLangId == python"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "vscodeai.view.common.addConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == BasePlatform"
+				},
+				{
+					"command": "vscodeai.view.common.editConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == BaseConfig",
+					"group": "config@1"
+				},
+				{
+					"command": "vscodeai.view.common.removeConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == BaseConfig",
+					"group": "config@2"
+				},
+				{
+					"command": "vscodeai.view.common.submitJob",
+					"when": "view == AIConfigExplorer && viewItem == BaseConfig",
+					"group": "job@1"
+				},
+				{
+					"command": "vscodeai.view.common.listJobs",
+					"when": "view == AIConfigExplorer && viewItem == BaseConfig",
+					"group": "job@2"
+				},
+				{
+					"command": "vscodeai.view.common.addConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == LinuxVMPlatform"
+				},
+				{
+					"command": "vscodeai.view.common.editConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == LinuxVMConfig",
+					"group": "config@1"
+				},
+				{
+					"command": "vscodeai.view.common.removeConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == LinuxVMConfig",
+					"group": "config@2"
+				},
+				{
+					"command": "vscodeai.view.common.submitJob",
+					"when": "view == AIConfigExplorer && viewItem == LinuxVMConfig",
+					"group": "job@1"
+				},
+				{
+					"command": "vscodeai.view.common.listJobs",
+					"when": "view == AIConfigExplorer && viewItem == LinuxVMConfig",
+					"group": "job@2"
+				},
+				{
+					"command": "vscodeai.view.common.openStorageExplorer",
+					"when": "view == AIConfigExplorer && viewItem == LinuxVMConfig",
+					"group": "storage@1"
+				},
+				{
+					"command": "vscodeai.batchai.login",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIPlatform",
+					"group": "account@1"
+				},
+				{
+					"command": "vscodeai.batchai.setSubscription",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIPlatform",
+					"group": "account@2"
+				},
+				{
+					"command": "vscodeai.batchai.logout",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIPlatform",
+					"group": "account@3"
+				},
+				{
+					"command": "vscodeai.view.common.addConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIPlatform",
+					"group": "config@1"
+				},
+				{
+					"command": "vscodeai.view.platform.listJobs",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIPlatform",
+					"group": "job@1"
+				},
+				{
+					"command": "vscodeai.view.common.editConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIConfig",
+					"group": "config@1"
+				},
+				{
+					"command": "vscodeai.view.common.removeConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIConfig",
+					"group": "config@2"
+				},
+				{
+					"command": "vscodeai.view.common.submitJob",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIConfig",
+					"group": "job@1"
+				},
+				{
+					"command": "vscodeai.view.common.openStorageExplorer",
+					"when": "view == AIConfigExplorer && viewItem == BatchAIConfig",
+					"group": "storage@1"
+				},
+				{
+					"command": "vscodeai.azureml.login",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLPlatform",
+					"group": "account@1"
+				},
+				{
+					"command": "vscodeai.azureml.setSubscription",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLPlatform",
+					"group": "account@2"
+				},
+				{
+					"command": "vscodeai.azureml.logout",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLPlatform",
+					"group": "account@3"
+				},
+				{
+					"command": "vscodeai.view.common.addConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLPlatform",
+					"group": "config@1"
+				},
+				{
+					"command": "vscodeai.view.platform.listJobs",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLPlatform",
+					"group": "job@1"
+				},
+				{
+					"command": "vscodeai.view.common.editConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLConfig",
+					"group": "config@1"
+				},
+				{
+					"command": "vscodeai.view.common.removeConfiguration",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLConfig",
+					"group": "config@2"
+				},
+				{
+					"command": "vscodeai.view.common.submitJob",
+					"when": "view == AIConfigExplorer && viewItem == AzureMLConfig",
+					"group": "job@1"
+				},
+				{
+					"command": "vscodeai.view.storage.refresh",
+					"when": "view == AIStorageExplorer && viewItem",
+					"group": "storage@1"
+				},
+				{
+					"command": "vscodeai.view.storage.upload",
+					"when": "view == AIStorageExplorer && viewItem",
+					"group": "storage@2"
+				},
+				{
+					"command": "vscodeai.view.storage.uploadFolder",
+					"when": "view == AIStorageExplorer && viewItem",
+					"group": "storage@2"
+				},
+				{
+					"command": "vscodeai.view.storage.download",
+					"when": "view == AIStorageExplorer && viewItem",
+					"group": "storage@3"
+				},
+				{
+					"command": "vscodeai.view.storage.mkdir",
+					"when": "view == AIStorageExplorer && viewItem",
+					"group": "storage@4"
+				},
+				{
+					"command": "vscodeai.view.storage.delete",
+					"when": "view == AIStorageExplorer && viewItem",
+					"group": "storage@5"
+				}
+			]
+		},
+		"jsonValidation": [
+			{
+				"fileMatch": "ai_job_properties.json",
+				"url": "./ai_job_properties.schema.json"
+			},
+			{
+				"fileMatch": "batchai_storage_credentials.json",
+				"url": "./batchai_storage_credentials.schema.json"
+			},
+			{
+				"fileMatch": "aitools_linuxvm*.json",
+				"url": "./linuxvm_config.schema.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "cntk",
+				"aliases": [
+					"CNTK",
+					"cntk"
+				],
+				"extensions": [
+					".cntk",
+					".bs"
+				],
+				"configuration": "./cntk.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "cntk",
+				"scopeName": "source.sql",
+				"path": "./syntaxes/cntk.tmLanguage"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack -p && tsc --project ./",
+		"package": "vsce package",
+		"build": "webpack && tsc --project ./",
+		"tsc": "tsc -w --project ./",
+		"webpack": "webpack -w",
+		"tslint": "tslint --project ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"adal-node": "^0.1.22",
+		"ajv": "^5.2.3",
+		"app-module-path": "^2.2.0",
+		"azure-arm-batchai": "^0.1.0",
+		"azure-arm-compute": "^4.0.0",
+		"azure-arm-resource": "^2.0.0-preview",
+		"azure-arm-storage": "^3.1.0",
+		"azure-storage": "^2.6.0",
+		"body-parser": "^1.18.2",
+		"comment-json": "^1.1.3",
+		"copy-paste": "^1.3.0",
+		"express": "^4.16.2",
+		"fkill": "^5.1.0",
+		"fs-extra": "^5.0.0",
+		"httpntlm": "^1.7.5",
+		"inversify": "^4.9.0",
+		"inversify-inject-decorators": "^3.0.2",
+		"klaw-sync": "^3.0.2",
+		"lodash": "^4.17.4",
+		"moment": "~2.18.1",
+		"ms-rest": "^2.2.7",
+		"ms-rest-azure": "^2.4.5",
+		"open": "0.0.5",
+		"p-event": "^1.3.0",
+		"pify": "^3.0.0",
+		"portfinder": "^1.0.13",
+		"reflect-metadata": "^0.1.10",
+		"ssh2": "^0.5.5",
+		"superagent": "^3.8.2",
+		"tar": "^4.2.0",
+		"unixify": "^1.0.0",
+		"uuid": "^3.1.0",
+		"vscode-extension-telemetry": "^0.0.8",
+		"vscode-nls": "^2.0.2",
+		"winston": "^2.4.0"
+	},
+	"devDependencies": {
+		"@types/body-parser": "^1.16.5",
+		"@types/copy-paste": "1.1.30",
+		"@types/fs-extra": "^5.0.0",
+		"@types/klaw-sync": "^1.1.3",
+		"@types/lodash": "^4.14.77",
+		"@types/marked": "^0.3.0",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^8.0.26",
+		"@types/opn": "3.0.28",
+		"@types/p-event": "^1.3.0",
+		"@types/react": "^16.0.34",
+		"@types/react-dom": "^16.0.3",
+		"@types/ssh2": "^0.5.35",
+		"@types/superagent": "^3.5.6",
+		"@types/tar": "^4.0.0",
+		"@types/winston": "^2.3.6",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-react": "^6.24.1",
+		"date-fns": "^1.29.0",
+		"marked": "^0.3.12",
+		"office-ui-fabric-react": "^5.39.1",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-responsive": "^4.0.3",
+		"smoothscroll-polyfill": "^0.4.0",
+		"styled-components": "^2.4.0",
+		"ts-loader": "^3.2.0",
+		"tslint": "^5.7.0",
+		"tslint-language-service": "^0.9.6",
+		"tslint-microsoft-contrib": "^5.0.1",
+		"typescript": "^2.5.3",
+		"vsce": "^1.36.2",
+		"vscode": "^1.1.6",
+		"webpack": "^3.10.0"
+	},
+	"__metadata": {
+		"id": "d3d5eb01-f0ed-451b-b1ef-8cdec17b2307",
+		"publisherId": "ac8eb7c9-3e59-4b39-8040-f0484d8170ce",
+		"publisherDisplayName": "Microsoft"
+	}
+}

@@ -1,0 +1,20 @@
+{
+    "from views import": {
+			"prefix": "fvi",
+			"body": "from .views import $1",
+			"description": "",
+			"scope": "source.python"
+	},
+    "igenericviews": {
+			"prefix": "igenericviews",
+			"body": "from django.views.generic import ${1|CreateView,DetailView,FormView,ListView,TemplateView,UpdateView|}",
+			"description": "Generic class-based views",
+			"scope": "source.python"
+	},
+	"isettings": {
+			"prefix": "isettings",
+			"body": "from django.conf import settings",
+			"description": "from django.conf import settings",
+			"scope": "source.python"
+	}	
+}

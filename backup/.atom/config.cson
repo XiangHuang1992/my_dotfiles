@@ -1,0 +1,40 @@
+"*":
+  Hydrogen:
+    debug: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "663b4a81-325f-40a6-a3c1-b17f2483f4d4"
+  "atom-clock":
+    dateFormat: "MMMM Do, dddd, h:mm:ss a"
+    locale: "zh_CN"
+    showClockIcon: true
+    showTooltip: true
+  "autocomplete-python":
+    useKite: false
+  core:
+    closeDeletedFileTabs: true
+    telemetryConsent: "limited"
+  editor:
+    showIndentGuide: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+    userId: "6db72b2c-58b7-44f6-b313-e836eff1f531"
+  kite:
+    editorMetricsEnabled: "yes"
+    showDocsNotificationOnStartup: false
+  "linter-ui-default":
+    showPanel: true
+  "platformio-ide-terminal":
+    core: {}
+    customTexts: {}
+    style:
+      fontFamily: "Meslo LG M for Powerline"
+      fontSize: "13"
+      theme: "solarized-dark"
+  "sync-settings":
+    _lastBackupHash: "38dbaf1b6c35b2207bbcd11cb0a0212833ca37b6"
+    gistId: "20abe5615b91934fd0f77bf294f8a4cd"
+    personalAccessToken: "cd17f90fef1cbac2e35fe3dbfad5855b7156b1fc"
+  welcome:
+    showOnStartup: false
