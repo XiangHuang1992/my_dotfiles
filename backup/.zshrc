@@ -187,4 +187,3 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv virtualenv-init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 alias vim='/usr/local/bin/vim'
-

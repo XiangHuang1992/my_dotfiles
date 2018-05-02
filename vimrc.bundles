@@ -17,7 +17,7 @@ filetype off " required! turn off
 " inspired by spf13, 自定义需要的插件集合
 if !exists('g:bundle_groups')
     " let g:bundle_groups=['python', 'javascript', 'golang', 'php', 'ruby', 'shell', 'markdown', 'html', 'css', 'less', 'coffeescript', 'tmux', 'json', 'beta']
-    let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'tmux', 'beta', 'json']
+    let g:bundle_groups=['python', 'javascript', 'golang', 'markdown', 'html', 'css', 'tmux', 'beta', 'json']
 endif
 
 " ----------------------------------------------------------------------------
@@ -167,13 +167,19 @@ if count(g:bundle_groups, 'tmux')
 endif
 
 if count(g:bundle_groups, 'markdown')
+    Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown', {'for': 'md'}
     " https://github.com/suan/vim-instant-markdown
     " npm -g install instant-markdown-d
-    " Plug 'suan/vim-instant-markdown'
-    " let g:instant_markdown_slow = 1
-    " let g:instant_markdown_autostart = 0
-    " map <F12> :InstantMarkdownPreview<CR>
+    Plug 'suan/vim-instant-markdown'
+    let g:instant_markdown_slow = 1
+    let g:instant_markdown_autostart = 0
+    map <F12> :InstantMarkdownPreview<CR>
+    let g:vim_markdown_json_frontmatter = 1
+    let g:vim_markdown_follow_anchor = 1
+    let g:vim_markdown_toc_autofit = 1
+    let g:vim_markdown_folding_style_pythonic = 1
+    let g:vim_markdown_override_foldtext = 0
 endif
 
 if count(g:bundle_groups, 'golang')
