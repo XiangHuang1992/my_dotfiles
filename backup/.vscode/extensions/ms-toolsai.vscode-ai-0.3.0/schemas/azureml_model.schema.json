@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "model name",
+            "type": "string",
+            "minLength": 1
+        },
+        "tags": {
+            "description": "model tags",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "url": {
+            "description": "the url of model file",
+            "type": "string",
+            "minLength": 1
+        },
+        "mimeType": {
+            "description": "mimeType",
+            "type": "string",
+            "minLength": 1
+        },
+        "description": {
+            "description": "description",
+            "type": "string"
+        },
+        "unpack": {
+            "description": "true if model file needs unpack, otherwise false",
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name",
+        "url",
+        "mimeType",
+        "unpack"
+    ]
+}

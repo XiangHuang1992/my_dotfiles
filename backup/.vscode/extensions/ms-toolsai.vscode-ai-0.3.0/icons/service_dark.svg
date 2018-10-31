@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>service_dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="service_dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-6" fill="#55B3FF" cx="8" cy="8" r="7"></circle>
+        <path d="M8.04296875,1.06884766 L8.04296875,15.1475019" id="Path-5" stroke="#383838"></path>
+        <path d="M1.00364164,8.10817477 L15.0822959,8.10817477" id="Path-5" stroke="#383838"></path>
+        <path d="M3,3 C5.97446355,4.27554087 9.31040216,4.27554087 13.0078158,3" id="Path-9" stroke="#383838"></path>
+        <path d="M3,12 C5.97446355,13.2755409 9.31040216,13.2755409 13.0078158,12" id="Path-9" stroke="#383838" transform="translate(8.003908, 12.500000) scale(1, -1) translate(-8.003908, -12.500000) "></path>
+        <path d="M6.01977539,1.15185547 C3.39811198,5.58566375 3.39811198,10.151541 6.01977539,14.8494873" id="Path-7" stroke="#383838"></path>
+        <path d="M11.9662476,1.1451416 C9.34458415,5.57894989 9.34458415,10.1448272 11.9662476,14.8427734" id="Path-7" stroke="#383838" transform="translate(10.983124, 7.993958) scale(-1, 1) translate(-10.983124, -7.993958) "></path>
+        <circle id="Oval-6" stroke="#FF8C02" cx="8" cy="8" r="7"></circle>
+    </g>
+</svg>

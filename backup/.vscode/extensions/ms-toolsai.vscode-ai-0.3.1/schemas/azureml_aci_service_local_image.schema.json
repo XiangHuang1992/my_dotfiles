@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "service name",
+            "type": "string",
+            "minLength": 1
+        },
+        "imageId": {
+            "description": "the image Id to deploy",
+            "type": "string",
+            "minLength": 1
+        },
+        "deploymentConfig": {
+            "description": "service deployment config",
+            "type": "object",
+            "properties": {
+                "cpu_cores": {
+                    "description": "the number of required CPU",
+                    "type": "number",
+                    "minLength": 1
+                },
+                "memory_gb": {
+                    "description": "required memory size",
+                    "type": "number",
+                    "minLength": 1
+                },
+                "tags": {
+                    "description": "service tags in the form of { key: value } pairs",
+                    "type": "object",
+                    "items": {
+                        "type": "object",
+                        "name": { "type": "string" }, 
+                        "value": { "type": "string" }
+                    }
+                },                
+                "description": {
+                    "description": "description",
+                    "type": "string"
+                }
+            },
+            "required": ["cpu_cores", "memory_gb"]
+        },
+        "deploymentType": {
+            "description": "service deployment type",
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": [
+        "name",
+        "imageId",
+        "deploymentConfig",
+        "deploymentType"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "description": "A Machine Learning compute based on Azure BatchAI.",
+    "properties": {
+        "computeType": {
+            "type": "string",
+            "description": "The type of compute",
+            "enum": [
+                "AKS",
+                "BatchAI",
+                "DataFactory",
+                "VirtualMachine"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the Machine Learning compute."
+        },
+        "resourceId": {
+            "type": "string",
+            "description": "ARM resource id of the compute"
+        },
+        "properties": {
+            "type": "object",
+            "description": "BatchAI properties",
+            "properties": {
+                "vmSize": {
+                    "type": "string",
+                    "description": "Virtual Machine Size"
+                },
+                "vmPriority": {
+                    "type": "string",
+                    "description": "Virtual Machine priority",
+                    "enum": [
+                        "dedicated",
+                        "lowpriority"
+                    ]
+                },
+                "scaleSettings": {
+                    "type": "object",
+                    "description": "Scale settings for BatchAI",
+                    "properties": {
+                        "maxNodeCount": {
+                            "description": "Max number of nodes to use",
+                            "type": "integer"
+                        },
+                        "minNodeCount": {
+                            "description": "Min number of nodes to use",
+                            "type": "integer"
+                        },
+                        "autoScaleEnabled": {
+                            "description": "Enable or disable auto scale",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "computeType"
+    ]
+}

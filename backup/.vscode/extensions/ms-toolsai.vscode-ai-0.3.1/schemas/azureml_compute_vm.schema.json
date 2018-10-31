@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "description": "A Machine Learning compute based on Azure Virtual Machines.",
+    "properties": {
+        "computeType": {
+            "type": "string",
+            "description": "The type of compute",
+            "enum": [
+                "AKS",
+                "BatchAI",
+                "DataFactory",
+                "VirtualMachine"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the Machine Learning compute."
+        },
+        "resourceId": {
+            "type": "string",
+            "description": "ARM resource id of the compute"
+        },
+        "properties": {
+            "type": "object",
+            "description": "Azure Virtual Machine properties",
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "description": "Address of virtual machine",
+                    "minLength": 1
+                },
+                "sshPort": {
+                    "type": "number",
+                    "description": "Port open for ssh connections"
+                },
+                "administratorAccount": {
+                    "type": "object",
+                    "description": "Admin credentials for virtual machine",
+                    "properties": {
+                        "username": {
+                            "type": "string",
+                            "description": "Username of admin account",
+                            "minLength": 1
+                        },
+                        "password": {
+                            "type": "string",
+                            "description": "Password of admin account",
+                            "minLength": 1
+                        },
+                        "publicKeyData": {
+                            "type": "string",
+                            "description": "Public key data",
+                            "minLength": 1
+                        },
+                        "privateKeyData": {
+                            "type": "string",
+                            "description": "Private key data",
+                            "minLength": 1
+                        },
+                        "passphrase": {
+                            "type": "string",
+                            "description": "SSH passphrase"
+                        }
+                    },
+                    "oneOf":[
+                        { "required": [ "username", "publicKeyData", "privateKeyData" ] },
+                        { "required": [ "username", "password" ] }
+                    ]
+                }
+            },
+            "required": [
+                "address",
+                "sshPort",
+                "administratorAccount"
+            ]
+        }
+    },
+    "required": [
+        "computeType",
+        "properties"
+    ]
+}

@@ -1,0 +1,54 @@
+{
+	"name": "vscode-python-docstring",
+	"displayName": "vscode-python-docstring",
+	"description": "Create docstring for python methods",
+	"version": "0.0.5",
+	"publisher": "azaugg",
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./out/src/extension",
+	"activationEvents": [
+		"onCommand:extension.addPyDocstring"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.addPyDocstring",
+				"title": "Add Py Docstring"
+			}
+		],
+		"configuration": {
+			"title": "PyDoc configs",
+			"properties": {
+				"pydocs.style": {
+					"type": "string",
+					"default": "google",
+					"enum": [
+						"google",
+						"numpy"
+					],
+					"description": "Set the pydoc string type. google inspired or NumPy: default being google pydocs"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"dependencies": {
+		"indent-string": "^2.1.0"
+	},
+	"__metadata": {
+		"id": "a6fe08f8-13f2-4e49-8e82-c92f4b928750",
+		"publisherId": "d710cf94-f953-4135-8e47-6883c1468a27",
+		"publisherDisplayName": "azaugg"
+	}
+}

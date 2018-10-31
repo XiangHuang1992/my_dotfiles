@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "description": "A Machine Learning compute based on AKS.",
+    "properties": {
+        "computeType": {
+            "type": "string",
+            "description": "The type of compute",
+            "enum": [
+                "AKS",
+                "BatchAI",
+                "DataFactory",
+                "VirtualMachine"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the Machine Learning compute."
+        },
+        "resourceId": {
+            "type": "string",
+            "description": "ARM resource id of the compute"
+        },
+        "properties": {
+            "type": "object",
+            "description": "AKS properties",
+            "properties": {
+                "clusterFqdn": {
+                    "type": "string",
+                    "description": "Cluster full qualified domain name"
+                },
+                "agentCount": {
+                    "type": "integer",
+                    "description": "Number of agents",
+                    "minimum": 6
+                },
+                "agentVMSize": {
+                    "type": "string",
+                    "description": "Agent virtual machine size"
+                },
+                "sslConfiguration": {
+                    "type": "object",
+                    "description": "The ssl configugation for scoring",
+                    "properties": {
+                        "status": {
+                            "type": "string",
+                            "description": "Enable or disable ssl for scoring",
+                            "enum": [
+                                "Disabled",
+                                "Enabled"
+                            ]
+                        },
+                        "cert": {
+                            "type": "string",
+                            "description": "Cert data"
+                        },
+                        "key": {
+                            "type": "string",
+                            "description": "Key data"
+                        },
+                        "cname": {
+                            "type": "string",
+                            "description": "CNAME of the cert"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "computeType"
+    ]
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Python-Language-Server-osx-x64</id>
+    <version>0.1.21-internal-18.267</version>
+    <title>Python Language Server</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/Microsoft/vscode-python/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Microsoft/vscode-python</projectUrl>
+    <description>Microsoft Python Language Server</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright (c) 2018</copyright>
+    <tags>Python;VS Code</tags>
+  </metadata>
+</package>

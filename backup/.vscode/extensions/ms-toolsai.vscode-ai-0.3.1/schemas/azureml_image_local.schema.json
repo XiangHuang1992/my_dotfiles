@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "image name",
+            "type": "string",
+            "minLength": 1
+        },
+        "description": {
+            "description": "description",
+            "type": "string"
+        },
+        "tags": {
+            "description": "image tags in the form of { key: value } pairs",
+            "type": "object",
+            "items": {
+                "type": "object",
+                "name": { "type": "string" }, 
+                "value": { "type": "string" }
+            }
+        },
+        "models": {
+            "description": "array of model Ids or model files",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "runtime": {
+            "description": "image runtime type",
+            "type": "string",
+            "minLength": 1
+        },
+        "executionScript": {
+            "description": "the path of image execution script",
+            "type": "string",
+            "minLength": 1
+        },
+        "dockerFile": {
+            "description": "the path of docker file if the this is a docker image",
+            "type": ["string", "null"] 
+        },
+        "condaFile": {
+            "description": "the path of conda env file",
+            "type": ["string", "null"]
+        },
+        "schemaFile": {
+            "description": "the path of image schema file",
+            "type": ["string", "null"]
+        },
+        "enableGpu": {
+            "description": "whether this image will use gpu",
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name",
+        "models",
+        "runtime",
+        "executionScript"
+    ]
+}

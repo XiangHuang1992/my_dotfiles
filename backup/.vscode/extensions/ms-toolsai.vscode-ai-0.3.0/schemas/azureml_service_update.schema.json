@@ -1,0 +1,23 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "op": {
+                "description": "operation description",
+                "type": "string",
+                "minLength": 1
+            },
+            "path": {
+                "description": "path description for update location",
+                "type": "string",
+                "minLength": 1
+            },
+            "value": {
+                "description": "value description for update",
+                "minLength": 1
+            }
+        },
+        "required": ["op", "path", "value"]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "modelName": {
+            "description": "model name",
+            "type": "string",
+            "minLength": 1
+        },
+        "tags": {
+            "description": "model tags",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "modelPath": {
+            "description": "the path of model file",
+            "type": "string",
+            "minLength": 1
+        },
+        "description": {
+            "description": "description",
+            "type": "string"
+        }
+    },
+    "required": [
+        "modelName",
+        "modelPath"
+    ]
+}

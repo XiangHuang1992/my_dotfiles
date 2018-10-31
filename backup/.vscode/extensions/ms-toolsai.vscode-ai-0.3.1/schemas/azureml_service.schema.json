@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "imageId": {
+            "description": "image id",
+            "type": "string",
+            "minLength": 1
+        },
+        "name": {
+            "description": "service name",
+            "type": "string",
+            "minLength": 3
+        },
+        "containerResourceRequirements": {
+            "description": "container resource requirements",
+            "type": "object",
+            "properties": {
+                "cpu": {
+                    "description": "the number of required CPU",
+                    "type": "number",
+                    "minLength": 1
+                },
+                "memoryInGB": {
+                    "description": "required memory size",
+                    "type": "number",
+                    "minLength": 1
+                }
+            }
+
+        },
+        "tags": {
+            "description": "service tags in the form of { key: value } pairs",
+            "type": "object",
+            "items": {
+                "type": "object",
+                "name": { "type": "string" }, 
+                "value": { "type": "string" }
+            }
+        },        "description": {
+            "description": "service description",
+            "type": "string"
+        },
+        "computeType": {
+            "description": "compute type",
+            "type": "string"
+        }
+    },
+    "required": ["imageId", "name", "containerResourceRequirements", "computeType"]
+}

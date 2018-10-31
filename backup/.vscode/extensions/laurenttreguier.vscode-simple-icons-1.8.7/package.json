@@ -1,0 +1,80 @@
+{
+	"name": "vscode-simple-icons",
+	"displayName": "Simple icon theme",
+	"description": "An icon theme that tries to be simple",
+	"version": "1.8.7",
+	"publisher": "LaurentTreguier",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LaurentTreguier/vscode-simple-icons/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LaurentTreguier/vscode-simple-icons.git"
+	},
+	"engines": {
+		"vscode": "^1.8.0"
+	},
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"keywords": [
+		"icon",
+		"theme",
+		"icon-theme",
+		"simple",
+		"icons"
+	],
+	"icon": "images/logo.png",
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"iconThemes": [
+			{
+				"id": "simple-icons",
+				"label": "Simple icons",
+				"path": "./simple-icons.json"
+			},
+			{
+				"id": "minimalistic-icons",
+				"label": "Minimalistic icons",
+				"path": "./minimalistic-icons.json"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Simple icons",
+				"properties": {
+					"simpleIcons.hideArrows": {
+						"type": "boolean",
+						"default": true,
+						"description": "Whether arrows are shown next to folders",
+						"scope": "window"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "bash ./generator.sh",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"svgo": "^1.0.5",
+		"typescript": "^3.0.3",
+		"vsce": "^1.48.0",
+		"vscode": "^1.1.21"
+	},
+	"dependencies": {},
+	"__metadata": {
+		"id": "23d65a8c-fcd4-4897-86da-7fe55088e2c6",
+		"publisherId": "08f24380-f487-49dd-ba4a-ea7bc7bda282",
+		"publisherDisplayName": "LaurentTreguier"
+	}
+}
