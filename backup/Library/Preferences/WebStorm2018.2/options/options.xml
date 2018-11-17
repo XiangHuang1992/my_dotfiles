@@ -1,0 +1,9 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="HbAutoCollapseBlocks" value="disabled" />
+    <property name="WebStorm.dumbRunEnabled" value="true" />
+    <property name="WebStorm.enableDefaultTooltipFixes" value="true" />
+    <property name="WebStorm.initialConfigurationShown" value="true" />
+    <property name="evlsprt3.182" value="14" />
+  </component>
+</application>

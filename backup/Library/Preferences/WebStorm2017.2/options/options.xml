@@ -1,0 +1,7 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="WebStorm.dumbRunEnabled" value="true" />
+    <property name="WebStorm.initialConfigurationShown" value="true" />
+    <property name="HbAutoCollapseBlocks" value="disabled" />
+  </component>
+</application>

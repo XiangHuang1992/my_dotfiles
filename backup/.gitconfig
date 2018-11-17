@@ -16,3 +16,9 @@
 	process = git-lfs filter-process
 [commit]
 	template = /Users/ferdinand/.stCommitMsg
+[magithub]
+	online = false
+[magithub "status"]
+	includeStatusHeader = false
+	includePullRequestsSection = false
+	includeIssuesSection = false

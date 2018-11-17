@@ -2,99 +2,25 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ferdinand/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='awesome-fontconfig'
-#POWERLEVEL9K_MODE='awesome-patched'
-ZSH_THEME="powerlevel9k/powerlevel9k"
-#POWERLEVEL9K_COLOR_SCHEME='light'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%{%F{249}%}\u250f"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%F{249}%}\u2517%{%F{default}%}❯ "
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_VCS_STAGED_ICON="\u00b1"
-POWERLEVEL9K_VCS_UNTRACKED_ICON="\u25CF"
-POWERLEVEL9K_VCS_UNSTAGED_ICON="\u00b1"
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON="\u2193"
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON="\u2191"
-POWERLEVEL9K_SHOW_CHANGESET="true"
-POWERLEVEL9K_CHANGESET_HASH_LENGTH="12"
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="clear"
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="clear"
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="yellow"
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="yellow"
-POWERLEVEL9K_DIR_HOME_BACKGROUND="clear"
-POWERLEVEL9K_DIR_HOME_FOREGROUND="blue"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="clear"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="blue"
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="clear"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
-POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND="red"
-POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND="white"
-POWERLEVEL9K_TODO_BACKGROUND="clear"
-POWERLEVEL9K_TODO_FOREGROUND="green"
-POWERLEVEL9K_OS_ICON_BACKGROUND="clear"
-POWERLEVEL9K_OS_ICON_FOREGROUND="white"
-POWERLEVEL9K_HISTORY_BACKGROUND="clear"
-POWERLEVEL9K_HISTORY_FOREGROUND="blue"
-POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
-POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
-POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND="clear"
-POWERLEVEL9K_LOAD_WARNING_BACKGROUND="clear"
-POWERLEVEL9K_LOAD_NORMAL_BACKGROUND="clear"
-POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND="red"
-POWERLEVEL9K_LOAD_WARNING_FOREGROUND="yellow"
-POWERLEVEL9K_LOAD_NORMAL_FOREGROUND="green"
-POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR="red"
-POWERLEVEL9K_LOAD_WARNING_VISUAL_IDENTIFIER_COLOR="yellow"
-POWERLEVEL9K_LOAD_NORMAL_VISUAL_IDENTIFIER_COLOR="green"
-POWERLEVEL9K_RAM_BACKGROUND="clear"
-POWERLEVEL9K_RAM_FOREGROUND="green"
-POWERLEVEL9K_RAM_ELEMENTS="ram_free"
-POWERLEVEL9K_TIME_BACKGROUND="clear"
-POWERLEVEL9K_TIME_FOREGROUND="white"
-POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %d.%m.%y}"
-POWERLEVEL9K_STATUS_VERBOSE="true"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('status' 'background_jobs' 'root_indicator' 'os_icon' 'context' 'dir' 'vcs')
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('load' 'ram' 'history' 'todo' 'time')
+ZSH_THEME=""
 
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -122,18 +48,34 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('load' 'ram' 'history' 'todo' 'time')
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions git npm node brew z  osx extract autojump python history)
-
+plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  git
+  npm
+  node
+  brew
+  osx
+  extract
+  autojump
+  python
+  history
+  virtualenv-autodetect
+)
 
 # autojump
 [[ -s /Users/ferdinand/.autojump/etc/profile.d/autojump.sh ]] && source /Users/ferdinand/.autojump/etc/profile.d/autojump.sh
@@ -144,12 +86,27 @@ source ~/.fonts/*.sh
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# source $ZSH/oh-my-zsh.sh
+#
+# pure 设置
+autoload -U promptinit; promptinit
+
+# optionally define some options
+PURE_CMD_MAX_EXEC_TIME=10
+
+prompt pure
+#PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
+#prompt_newline='%666v'
+PROMPT='%F{white}%* '$PROMPT
+#PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+
+# User configuration
+#export PATH="usr/sbin:/sbin"
+#export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -171,19 +128,57 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+# alias ohmyzsh="mate ~/.oh-my-zsh"a
+# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/sbin:/sbin"
+# export PATH="/usr/local/opt/openssl/bin:$PATH"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export PATH="$PATH":~/.node/bin
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads
+export PATH="$PATH":/Users/ferdinand/.node/bin
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-eval "$(pyenv virtualenv-init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-alias vim='/usr/local/bin/vim'
+export PATH=/usr/local/bin:/usr/bin:/bin
+
+# RabbitMQ Config
+#export PATH=$PATH:/usr/local/sbin
+#export PATH=/usr/local/bin:/usr/bin:/bin
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+#alias for cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# pyenv config
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# 导入.bash_profile
+source $HOME/.bash_profile
+
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# pyenv virtualenv config
+# eval $(pyenv init -)
+# eval $(pyenv virtualenv-init -)
+
+# pyenv-virtualenv
+if which pyenv-virtualenv-init > /dev/null;
+  then eval "$(pyenv virtualenv-init -)";
+fi
+

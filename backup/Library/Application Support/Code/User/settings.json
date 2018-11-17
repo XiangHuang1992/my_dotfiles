@@ -1,6 +1,9 @@
 {
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "editor.wordWrap": "on",
+    "files.associations": {
+        ".gitignore": "gitignore"
+    },
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -15,7 +18,7 @@
     },
     "gitlens.keymap": "alternate",
     "material-icon-theme.showUpdateMessage": false,
-    "python.formatting.provider": "yapf",
+    "materialTheme.fixIconsRunning": false,
     "python.linting.flake8Enabled": true,
     "python.pythonPath": "/Users/ferdinand/anaconda3",
     "sync.askGistName": false,
@@ -30,8 +33,40 @@
     "sync.quietSync": false,
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
+    "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-great-icons"
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Dracula Soft",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorCustomizations": {
+        "tab.activeBackground": "#282c34",
+        "activityBar.background": "#282c34",
+        "editorGroup.background": "#282c34",
+        "sideBar.background": "#282c34",
+        "activityBarBadge.background": "#00BCD4",
+        "list.activeSelectionForeground": "#00BCD4",
+        "list.inactiveSelectionForeground": "#00BCD4",
+        "list.highlightForeground": "#00BCD4",
+        "scrollbarSlider.activeBackground": "#00BCD450",
+        "editorSuggestWidget.highlightForeground": "#00BCD4",
+        "textLink.foreground": "#00BCD4",
+        "progressBar.background": "#00BCD4",
+        "pickerGroup.foreground": "#00BCD4",
+        "tab.activeBorder": "#00BCD4",
+        "notificationLink.foreground": "#00BCD4",
+        "editorWidget.resizeBorder": "#00BCD4",
+        "editorWidget.border": "#00BCD4",
+        "settings.modifiedItemIndicator": "#00BCD4",
+        "settings.headerForeground": "#00BCD4",
+        "panelTitle.activeBorder": "#00BCD4",
+        "breadcrumb.activeSelectionForeground": "#00BCD4",
+        "menu.selectionForeground": "#00BCD4",
+        "menubar.selectionForeground": "#00BCD4"
+    },
+    "python.envFile": "${workspaceFolder}/.venv",
+    "python.jediEnabled": false,
+    "git.autofetch": true,
+    "materialTheme.accent": "Cyan",
+    "materialTheme.autoApplyIcons": true
 }
