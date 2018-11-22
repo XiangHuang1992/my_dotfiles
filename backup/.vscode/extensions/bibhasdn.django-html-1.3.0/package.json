@@ -1,0 +1,61 @@
+{
+	"name": "django-html",
+	"version": "1.3.0",
+	"publisher": "bibhasdn",
+	"author": {
+		"name": "Bibhas Debnath"
+	},
+	"license": "MIT",
+	"icon": "icon.png",
+	"description": "Django template language support for Visual Studio Code",
+	"displayName": "Django Template",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iambibhas/vscode-django-template.git"
+	},
+	"bugs": {
+		"url": "https://github.com/iambibhas/vscode-django-template/issues"
+	},
+	"categories": [
+		"Languages",
+		"Snippets",
+		"Linters"
+	],
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "django-html",
+				"aliases": [
+					"Django Template"
+				],
+				"extensions": [
+					".html",
+					".htm"
+				],
+				"configuration": "./django-html.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "django-html",
+				"scopeName": "text.html.django",
+				"path": "./syntaxes/django-html.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "django-html",
+				"scopeName": "text.html.django",
+				"path": "./snippets/django-snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "34e27654-43b1-4a43-bfd5-e81a7a6c2ffa",
+		"publisherId": "6988a0fe-3274-489b-a43f-50675e93b44f",
+		"publisherDisplayName": "bibhasdn"
+	}
+}
