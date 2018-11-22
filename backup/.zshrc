@@ -74,7 +74,6 @@ plugins=(
   autojump
   python
   history
-  virtualenv-autodetect
 )
 
 # autojump
@@ -87,7 +86,6 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-# source $ZSH/oh-my-zsh.sh
 #
 # pure 设置
 autoload -U promptinit; promptinit
@@ -129,21 +127,17 @@ PROMPT='%F{white}%* '$PROMPT
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"a
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-# export PATH="/usr/local/sbin:$PATH"
-# export PATH="/usr/sbin:/sbin"
-# export PATH="/usr/local/opt/openssl/bin:$PATH"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH="$PATH":~/.node/bin
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads
-export PATH="$PATH":/Users/ferdinand/.node/bin
+#export PATH="$PATH":~/.node/bin
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads
+# export PATH="$PATH":/Users/ferdinand/.node/bin
 
 export PATH=/usr/local/bin:/usr/bin:/bin
 
@@ -162,23 +156,18 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # pyenv config
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# export PATH="$HOME/.local/bin"
 # 导入.bash_profile
+source $HOME/.profile
 source $HOME/.bash_profile
+source $HOME/.zshenv
+#export PATH="$HOME/.local/bin"
+export PIPENV_VENV_IN_PROJECT=1
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-# pyenv virtualenv config
-# eval $(pyenv init -)
-# eval $(pyenv virtualenv-init -)
-
-# pyenv-virtualenv
-if which pyenv-virtualenv-init > /dev/null;
-  then eval "$(pyenv virtualenv-init -)";
-fi
 
