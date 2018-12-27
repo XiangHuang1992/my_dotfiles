@@ -2,7 +2,7 @@
     "editor.fontSize": 14,
     "editor.wordWrap": "on",
     "files.associations": {
-        ".gitignore": "gitignore"
+        ".gitignore": "gitignore",
     },
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -33,40 +33,91 @@
     "sync.quietSync": false,
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
-    "terminal.external.osxExec": "iTerm.app",
+    "terminal.external.osxExec": "iTerm2.app",
     "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
     "vsicons.dontShowNewVersionMessage": true,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Dracula Soft",
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.iconTheme": "vscode-great-icons",
     "workbench.colorCustomizations": {
-        "tab.activeBackground": "#282c34",
-        "activityBar.background": "#282c34",
-        "editorGroup.background": "#282c34",
-        "sideBar.background": "#282c34",
-        "activityBarBadge.background": "#00BCD4",
-        "list.activeSelectionForeground": "#00BCD4",
-        "list.inactiveSelectionForeground": "#00BCD4",
-        "list.highlightForeground": "#00BCD4",
-        "scrollbarSlider.activeBackground": "#00BCD450",
-        "editorSuggestWidget.highlightForeground": "#00BCD4",
-        "textLink.foreground": "#00BCD4",
-        "progressBar.background": "#00BCD4",
-        "pickerGroup.foreground": "#00BCD4",
-        "tab.activeBorder": "#00BCD4",
-        "notificationLink.foreground": "#00BCD4",
-        "editorWidget.resizeBorder": "#00BCD4",
-        "editorWidget.border": "#00BCD4",
-        "settings.modifiedItemIndicator": "#00BCD4",
-        "settings.headerForeground": "#00BCD4",
-        "panelTitle.activeBorder": "#00BCD4",
-        "breadcrumb.activeSelectionForeground": "#00BCD4",
-        "menu.selectionForeground": "#00BCD4",
-        "menubar.selectionForeground": "#00BCD4"
+        "activityBarBadge.background": "#F44336",
+        "list.activeSelectionForeground": "#F44336",
+        "list.inactiveSelectionForeground": "#F44336",
+        "list.highlightForeground": "#F44336",
+        "scrollbarSlider.activeBackground": "#F4433650",
+        "editorSuggestWidget.highlightForeground": "#F44336",
+        "textLink.foreground": "#F44336",
+        "progressBar.background": "#F44336",
+        "pickerGroup.foreground": "#F44336",
+        "tab.activeBorder": "#F44336",
+        "notificationLink.foreground": "#F44336",
+        "editorWidget.resizeBorder": "#F44336",
+        "editorWidget.border": "#F44336",
+        "settings.modifiedItemIndicator": "#F44336",
+        "settings.headerForeground": "#F44336",
+        "panelTitle.activeBorder": "#F44336",
+        "breadcrumb.activeSelectionForeground": "#F44336",
+        "menu.selectionForeground": "#F44336",
+        "menubar.selectionForeground": "#F44336"
     },
     "python.envFile": "${workspaceFolder}/.venv",
     "python.jediEnabled": false,
     "git.autofetch": true,
     "materialTheme.accent": "Cyan",
-    "materialTheme.autoApplyIcons": true
+    "materialTheme.autoApplyIcons": true,
+    "workbench.fontAliasing": "auto",
+    "breadcrumbs.enabled": true,
+    "workbench.editor.swipeToNavigate": true,
+    "window.nativeTabs": true,
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "http.systemProxy": "on",
+    "python.analysis.disabled": [],
+    "python.analysis.logLevel": "Trace",
+    "python.autoComplete.addBrackets": true,
+    "python.disableInstallationCheck": true,
+    "editor.tokenColorCustomizations": {
+        "[Meterial Theme VARIANT]":{
+            "sideBar.background": "#347890",
+            "textMateRules": [
+                {
+                    "scope": [
+                        "punctuation.definition.comment",
+                        "comment.block",
+                        "comment.line",
+                        "comment.block.documentation"
+                    ],
+                    "settings": {
+                        "foreground": "#FF0000"
+                    }
+                }
+            ]
+        },
+    },
+    "terminal.explorerKind": "external",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.rendererType": "canvas",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "editor.tabCompletion": "on",
+    "editor.parameterHints.enabled": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.options.useTabs": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "vue",
+            "autoFix": true,
+        }
+    ],
+    "vetur.format.defaultFormatter.js": "none",
+    "kite.editorMetricsEnabled": "yes"
 }

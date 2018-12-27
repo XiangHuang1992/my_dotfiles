@@ -9,4 +9,6 @@ export PATH="$PATH":/Users/ferdinand/.node/bin
 export PATH=$PATH:/usr/local/sbin
 # export PATH=$HOME/.local/bin
 
-export PATH="$HOME/.pyenv/versions/anaconda3-5.3.0/bin:$PATH"
+export PYTHON_CONFIGURE_OPTS="--enable-framework"
+eval "$(pipenv --completion)"
+

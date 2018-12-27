@@ -47,6 +47,7 @@ filetype plugin indent on
 " General Settings 基础设置
 "==========================================
 
+"set terminalguicolors
 
 " history存储容量
 set history=2000
@@ -700,11 +701,13 @@ endif
 
 
 " theme主题
-set background=dark
-set t_Co=256
+"syntax enable
+"set background=light
+"set t_Co=256
 
 colorscheme solarized
-" colorscheme molokai
+"colorscheme molokai
+"g:solorized_termcolors=256
 
 
 " 设置标记一列的背景颜色和数字一行颜色一致

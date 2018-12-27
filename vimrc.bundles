@@ -141,6 +141,15 @@ Plug 'altercation/vim-colors-solarized'
 " 主题 molokai
 Plug 'tomasr/molokai'
 
+" vim start
+Plug 'mhinz/vim-startify'
+
+" indentline
+Plug 'yggdroot/indentline'
+
+" vim-gittter
+Plug 'airblade/vim-gitgutter'
+
 
 " nav
 " nerdtree nerdtreetabs
@@ -202,6 +211,8 @@ if count(g:bundle_groups, 'python')
     Plug 'fisadev/vim-isort'
     " Shift-V 上下选中, ctrl + i 规范化
     let g:vim_isort_map = '<C-i>'
+    " 使用pipenv
+    let g:ale_python_auto_pipenv = 1
 endif
 
 if count(g:bundle_groups, 'php')
