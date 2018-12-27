@@ -1,0 +1,26 @@
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+backup/.vscode/extensions/*
+backup/Library/*
+backup/.emacs.d/*
+backup/.vim/*
+backup/.vim/autoload/*
+backup/.vim/bundle/*
+backup/.vim/pack/*
