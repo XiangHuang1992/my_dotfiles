@@ -38,7 +38,7 @@
     "vsicons.dontShowNewVersionMessage": true,
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Solarized Light",
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#F44336",
         "list.activeSelectionForeground": "#F44336",
@@ -119,5 +119,9 @@
         }
     ],
     "vetur.format.defaultFormatter.js": "none",
-    "kite.editorMetricsEnabled": "yes"
+    "kite.editorMetricsEnabled": "yes",
+    "kite.showDocsNotificationOnStartup": false,
+    "editor.renderControlCharacters": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
